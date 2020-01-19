@@ -1,0 +1,13 @@
+theme            : template
+
+theme-background : [ "#102131" ]
+theme-headline   : [ "Ubuntu", "#67c6ff", "none" ]
+theme-byline     : [ "Ubuntu", "#F6F6F6", "none" ]
+theme-text       : [ "Ubuntu", "#F6F6F6", "none" ]
+theme-links      : [ "#5289F7", "#5254F7" ]
+theme-code       : [ "Source Code Pro" ]
+theme-controls   : [ "#" ]
+theme-margins    : [ "0", "15px" ]
+theme-override : PITCHME.css
+pro-menus-hidden: true
+published : true
