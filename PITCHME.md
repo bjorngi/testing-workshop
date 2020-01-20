@@ -33,18 +33,24 @@ gitpitch.com/bjorngi/testing-workshop
 
 * **Assertion functions**
   * @size[0.7em](Funksjoner som evaluerer resultat av tester)
-  * @size[0.7em](Chai, Jasmine, Jest, Unexpected, Expectedm TestCafe, Cypress)
+  * @size[0.7em](Chai, Jasmine, Jest, Unexpected, Expected, TestCafe)
 
 ---
 ## Semantikk
 
 * **Mocks, spies og stubs**
   * @size[0.7em](*Doubles* som brukes i testing)
+  * @size[0.7em](Bruker fixtures)
   * @size[0.7em](Sinon, Jasmine, enzyme, Jest, testdouble)
+
+* **Test libraries**
+  * @size[0.7em](Samling av launcher, assertion function, mocks, spies og stubs)
+  * @size[0.7em](Jest, Jasmine, Mocha)
 
 * **Browser kontrollere**
   * @size[0.7em](Tar kontroll over browser og simulerer bruk)
   * @size[0.7em](Selenium, Nightwatch, Nightmare, Phantom, Puppeteer, TestCafe, Cypress)
+
 
 ---
 ## Semantikk
@@ -64,27 +70,26 @@ gitpitch.com/bjorngi/testing-workshop
 
 ---
 ## Test strategi
-* Alle tester er bedre enn ingen tester
 * Tester påvirker kode og arkitektur
 * Highest value tests
   * Kjøretid, tid å lage, coverage, kompleksitet
+* ~~Alle~~ De fleste tester er bedre enn ingen tester
 
 ---
 ## Ikke bare tester
 * Linting/Statisk kodeanalyse
 * Defensive coding
 * Typing
-* Kodekvalitet
 * Lesbarhet
 * Separation of concerns
 ---
 ## Enhetstester
-* Tester funksjoner eller klasser isolert
+* Tester funksjoner isolert
 * Feedback under utvikling
 * Raske
 * Enkelt å lage
 * Mocking/Injection
-* Lett å teste **rene funksjoner**
+* Lett å teste **<u>rene funksjoner</u>**
 
 <div class='test-types'>
   <span class='test-type unit'>Jest</span>
@@ -102,8 +107,8 @@ gitpitch.com/bjorngi/testing-workshop
 ## Oppgave 1
 * Last ned eksempel kode:
   * https://github.com/bjorngi/testing-workshop
-* Lag loading state
-* Refaktorer og lag unit-tester (med Jest)
+* Implementer sortering på navn
+* Refaktorer og lag enhetstester (med Jest)
 
 
 <div class='test-types'>
@@ -131,6 +136,7 @@ gitpitch.com/bjorngi/testing-workshop
 ---
 ## Oppgave 2
 Legg integrasjonstester til prosjektet
+* Mock API
 
 <span class='test-type e2e'>Enzyme</span>
 
