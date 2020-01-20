@@ -1,10 +1,21 @@
 import React, {useState, useEffect, useCallback} from 'react';
 import Pokemon from '../pokemon'
 
+
+export const sortPokemon = (pokemons: any[]) => (
+  pokemons.sort((a, b) => (a.name < b.name) ? -1 : 1)
+)
+
 const Pokelist: React.FC = () => {
   const [pokelist, setPokelist] = useState<any[]>([])
+  const [parsedPokelist, setParsedPokelist] = useState<any[]>([])
   const [shouldLoadPokemons, setLoadPokemons] = useState(true)
   const [nextPokemonsUrl, setNextPokemonsUrl] = useState<string | null>(null)
+  const [showSorted, setShowSorted] = useState<boolean>(false)
+
+  const toggleShowSorted = useCallback(() => {
+    setShowSorted(!showSorted)
+  }, [showSorted])
 
   const appendPokemons = useCallback(
     (newPokemons) => {
@@ -22,9 +33,17 @@ const Pokelist: React.FC = () => {
   const loadPokemons = useCallback(() => setLoadPokemons(true), [])
 
   useEffect(() => {
+    if (showSorted) {
+      setParsedPokelist(sortPokemon(pokelist))
+    } else {
+      setParsedPokelist(pokelist)
+    }
+  }, [pokelist, showSorted])
+
+
+  useEffect(() => {
     if (shouldLoadPokemons) {
       setLoadPokemons(false)
-
 
       fetch(getUrl())
         .then((res) => res.json())
@@ -38,10 +57,10 @@ const Pokelist: React.FC = () => {
   return (
     <div className="Pokelist">
       <div>Finn pokemon på navn: <input type='text' /><button>Søk</button></div>
-      <button>Sorter på navn</button>
-      <div className='stats'>Viser {pokelist.length} pokemons</div>
+      <button onClick={toggleShowSorted}>Sorter på navn</button>
+      <div className='stats'>Viser {parsedPokelist.length} pokemons {showSorted &&'sortert'}</div>
       <div className="pokemons">
-        {pokelist.map((pokemon: any) => <Pokemon name={pokemon.name} />)}
+        {parsedPokelist.map((pokemon: any) => <Pokemon key={pokemon.name} name={pokemon.name} />)}
       </div>
       <button onClick={loadPokemons}>Last flere</button>
     </div>
