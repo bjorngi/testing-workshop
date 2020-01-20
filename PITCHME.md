@@ -14,8 +14,19 @@ gitpitch.com/bjorngi/testing-workshop
 * Funksjonelle tester (E2E, end-to-end)
 
 
+---?color=white
+@snap[west span-50]
+![Test pyramid](./img/testing-pyramid.png)
+@snapend
+
+@snap[north east span-50]
+![Test pyramid](./img/test-diamond.png)
+@snapend
+
+
 ---
 ## Semantikk
+
 * **Test launcher**
   * @size[0.7em](Programmet som kjører testene)
   * @size[0.7em](Jest, Karma, Jasmine, TestCafe, Cypress)
@@ -26,31 +37,27 @@ gitpitch.com/bjorngi/testing-workshop
 
 ---
 ## Semantikk
-* Mocks, spies og stubs
+
+* **Mocks, spies og stubs**
   * @size[0.7em](*Doubles* som brukes i testing)
   * @size[0.7em](Sinon, Jasmine, enzyme, Jest, testdouble)
- 
-* Code coverage generatorer
-  * @size[0.7em](Lager oversikt over hvilke deler/linjer av koden som er testet)
-  * @size[0.7em](Istanbul, Blanket)
 
-* Browser kontrollere
-
+* **Browser kontrollere**
   * @size[0.7em](Tar kontroll over browser og simulerer bruk)
   * @size[0.7em](Selenium, Nightwatch, Nightmare, Phantom, Puppeteer, TestCafe, Cypress)
 
 ---
 ## Semantikk
 
-* Accessibility testing
-  * @size[0.7em]Sjekke universell utforming og best practices
+* **Accessibility testing**
+  * @size[0.7em](Sjekke universell utforming og best practices)
   * @size[0.7em](Pa11y, lighthouse, AATT, Jest-axe)
 
-* Regresjonstester
+* **Regresjonstester**
   * @size[0.7em](Tidligere laget tester som kjører og bekrefter at koden fremdeles fungerer)
-  * @size[0.7em](Performance tester)
+  * @size[0.7em](Performance tester som kan validere at koden ikke har blitt tregere)
 
-* Visual regression tests
+* **Visual regression tests**
   * @size[0.7em](Sjekker visuelle forskjeller)
   * @size[0.7em](Applitools, Percy, Wraith, WebdriverCSS)
 
@@ -60,27 +67,16 @@ gitpitch.com/bjorngi/testing-workshop
 * Alle tester er bedre enn ingen tester
 * Tester påvirker kode og arkitektur
 * Highest value tests
-* Test coverage "goals"
+  * Kjøretid, tid å lage, coverage, kompleksitet
 
 ---
 ## Ikke bare tester
-* Linting
-* Statisk kodeanalyse
+* Linting/Statisk kodeanalyse
 * Defensive coding
 * Typing
 * Kodekvalitet
 * Lesbarhet
 * Separation of concerns
-
----?color=white
-@snap[west span-50]
-![Test pyramid](./img/testing-pyramid.png)
-@snapend
-
-@snap[north east span-50]
-![Test pyramid](./img/test-diamond.png)
-@snapend
-
 ---
 ## Enhetstester
 * Tester funksjoner eller klasser isolert
@@ -123,6 +119,7 @@ gitpitch.com/bjorngi/testing-workshop
   * @size[0.7em](funksjoner, klasser, komponenter)
 * Stort spenn
 * Uenighet i definisjon
+* Mocking av eksterne tjenester
 
 
 <div class='test-types'>
@@ -136,6 +133,14 @@ gitpitch.com/bjorngi/testing-workshop
 Legg integrasjonstester til prosjektet
 
 <span class='test-type e2e'>Enzyme</span>
+
+---
+## Code coverage
+* Visualiserer hvilke deler av koden som er testet
+* En indikator ikke mål
+
+---
+![Instabul](./img/instanbul.png)
 
 ---
 ## Oppgave 3
@@ -190,6 +195,18 @@ Sett opp Accessibility Testing
   <span class='test-type e2e'>Jest-axe</span>
 </div>
 
+
 ---
+## Oppgave 6
+Sett opp Visual Regression Tests
+<div class='test-types'>
+  <span class='test-type e2e'>Applitools</span>
+  <span class='test-type e2e'>Percy</span>
+  <span class='test-type e2e'>Wraith</span>
+  <span class='test-type e2e'>WebdriverCSS</span>
+</div>
+
+---
+
 ## "Jobblekse"
 Finn en kodesnutt i prosjektet ditt og skriv en test til den (trenger ikke å være din egen kode).
