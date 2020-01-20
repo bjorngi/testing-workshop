@@ -2,6 +2,10 @@
 # @color[#f6f6f6](Testing)
 
 Bjørn Gilstad
+@snap[south span-100]
+gitpitch.com/bjorngi/testing-workshop
+@snapend
+
 
 ---
 ## Typer tester
@@ -100,10 +104,11 @@ Bjørn Gilstad
 
 ---
 ## Oppgave 1
-Sett opp prosjekt med React og Unit Testing.
-* HTTP
-* Input
-* Knapp
+* Last ned eksempel kode:
+  * https://github.com/bjorngi/testing-workshop
+* Lag loading state
+* Refaktorer og lag unit-tester (med Jest)
+
 
 <div class='test-types'>
   <span class='test-type unit'>Jest</span>
@@ -130,12 +135,20 @@ Sett opp prosjekt med React og Unit Testing.
 ## Oppgave 2
 Legg integrasjonstester til prosjektet
 
+<span class='test-type e2e'>Enzyme</span>
+
+---
+## Oppgave 3
+Generer test coverage
+
+<span class='test-type integration'>Instabul</span>
+<span class='test-type integration'>Blanket</span>
+
 ---
 ## Funksjonelle tester
 * End-to-end
 * Automatiserte tester av hele systemet
 * Kjøres i miljøet som skal brukes
-
 
 <div class='test-types'>
   <span class='test-type unit'>Selenium</span>
@@ -147,12 +160,27 @@ Legg integrasjonstester til prosjektet
 </div>
 
 ---
-
-## Oppgave 3
-Sett opp funksjonelle tester til prosjektet
+@code[ts](./examples/cypress.js)
 
 ---
+![Cypress](./img/cypress.png)
+
+---
+
 ## Oppgave 4
+Sett opp funksjonelle tester til prosjektet
+
+<div class='test-types'>
+  <span class='test-type unit'>Selenium</span>
+  <span class='test-type unit'>Cypress</span>
+  <span class='test-type unit'>Nightmare</span>
+  <span class='test-type unit'>Nightwatch</span>
+  <span class='test-type unit'>Puppeteer</span>
+  <span class='test-type unit'>TestCafé</span>
+</div>
+
+---
+## Oppgave 5
 Sett opp Accessibility Testing
 
 <div class='test-types'>
