@@ -70,6 +70,10 @@ gitpitch.com/bjorngi/testing-workshop
 
 ---
 ## Test strategi
+* Hva tester vi
+* Hvorfor tester vi det
+* Hva er målene med testene
+<br /><br />
 * Tester påvirker kode og arkitektur
 * Highest value tests
   * Kjøretid, tid å lage, coverage, kompleksitet
