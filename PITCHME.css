@@ -1,0 +1,32 @@
+.test-types {
+}
+
+.test-type {
+  border: 1px 1px solid !important;
+  font-size: 20px !important;
+  padding: 10px !important;
+  line-height: 1.0;
+  font-weight: bold;
+  height: 10px !important;
+  color: white;
+  margin: 2px;
+  border: 2px solid #fff !important;
+  border-radius: 10px;
+  background: #000;
+  color: #1e4066;
+}
+
+.test-type.unit {
+  background: #6ccdff;
+  border-color: #fff;
+}
+
+.test-type.integration {
+  background: #f8ffa8;
+  border-color: #fff;
+}
+
+.test-type.e2e {
+  background: #aefdff;
+  border-color: #fff;
+}
