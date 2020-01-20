@@ -37,6 +37,7 @@ const Pokelist: React.FC = () => {
 
   return (
     <div className="Pokelist">
+      <div>Finn pokemon på navn: <input type='text' /></div>
       <button>Sorter på navn</button>
       <div className='stats'>Viser {pokelist.length} pokemons</div>
       <div className="pokemons">
